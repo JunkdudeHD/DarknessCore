@@ -1,0 +1,29 @@
+<?php
+
+namespace DarknessCore;
+
+use pocketmine\plugin\PluginBase;
+use pocketmine\command\Command;
+use pocketmine\command\CommandSender;
+use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\Listener;
+use pocketmine\Server;
+use pocketmine\utils\TextFormat;
+use pocketmine\Player;
+
+class Main extends PluginBase implements Listener{
+
+public function onEnable(){
+     $this->getServer()->getPluginManager()->registerEvents($this,$this); // THIS LINE
+       $this->getLogger()->info(TextFormat::GREEN."DarknessCore Has Been Enabled");
+       }
+public function onCommand(CommandSender $sender,Command $cmd,$Label,array $args){
+  if($cmd->getName() == "store"){
+  $player = $this->getServer()->getPlayer($sender->getName());
+  $sender->sendMessage(TEXTFORMAT::GOLD . "DemiGod: Availiable For Purchase For $5"));
+  $sender->sendMessage(TEXTFORMAT::GOLD . "God: Availiable For Purchase For $10"));
+  $sender->sendMessage(TEXTFORMAT::GOLD . "Purchase All These At DarknessPE.Buycraft.Net!"));
+  }
+  }
+ 
+    
