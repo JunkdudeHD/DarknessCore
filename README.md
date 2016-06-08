@@ -1,0 +1,2 @@
+# DarknessCore
+Our Core Plugin! 
